@@ -1,13 +1,14 @@
 package com.margaridacleber.trackingMyMoney.controller.home;
 
+import com.margaridacleber.trackingMyMoney.controller.CommonController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class HomeController extends CommonController {
 
-    @GetMapping("home")
-    String Home() {
-        return "Home/home";
+    @GetMapping("Home")
+    public String Index() {
+        return this.GetIndex();
     }
 }
